@@ -52,25 +52,31 @@ var s5 = {
 // creo l'array aula
 
 var aula = [s1, s2, s3, s4, s5];
-console.log(aula);
+console.log(aula); // aula prima dell'arrivo del nuovo studente
 
-// stampo nome e cognome di ogni studente
+// for (var nome in s1){ // in realtà potrei avere un ciclo for con aula[i].nome e anche con il cognome // oppure sempre con il ciclo for si può stampare tutto tranne eta grazie al for in con un if
+//   console.log(s1.nome + ' ' + s1.cognome);
+// }
+// for (var nome in s2){
+//   console.log(s2.nome + ' ' + s2.cognome);
+// }
+// for (var nome in s3){
+//   console.log(s3.nome + ' ' + s3.cognome);
+// }
+// for (var nome in s4){
+//   console.log(s4.nome + ' ' + s4.cognome);
+// }
+// for (var nome in s5){
+//   console.log(s5.nome + ' ' + s5.cognome);
+// }
 
-for (var nome in s1){
-  console.log(s1.nome + ' ' + s1.cognome);
-}
-for (var nome in s2){
-  console.log(s2.nome + ' ' + s2.cognome);
-}
-for (var nome in s3){
-  console.log(s3.nome + ' ' + s3.cognome);
-}
-for (var nome in s4){
-  console.log(s4.nome + ' ' + s4.cognome);
-}
-for (var nome in s5){
-  console.log(s5.nome + ' ' + s5.cognome);
-}
+// for (i = 0; i < aula.length; i++){
+//   console.log(aula[i].nome + ' ' + aula[i].cognome);
+// }
+
+for (i = 0; i < aula.length; i++){
+  console.log(aula[i].nome + ' ' + aula[i].cognome);
+} // stampo nome e cognome dell'aula senza il nuovo studente
 
 // creo i prompt per far inserire allo studente i propri dati
 
@@ -83,6 +89,13 @@ studente.nome = nomeStudente;
 studente.cognome = cognomeStudente;
 studente.età = etaStudente;
 
-// lo stampo in pagina e lo pusho in aula
-console.log(studente);
+// pusho lo studente nell'aula
 aula.push(studente);
+
+// lo stampo in pagina
+
+console.log(aula); // aula al completo
+
+for (i = 0; i < aula.length; i++){
+  console.log(aula[i].nome + ' ' + aula[i].cognome);
+} // nome e cognome di tutti gli studenti, aggiunta compresa
