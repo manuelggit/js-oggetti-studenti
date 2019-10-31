@@ -4,17 +4,20 @@
 // Ciclare su tutti gli studenti e stampare per ognuno nome e cognome
 // - Dare la possibilità all’utente attraverso 3 prompt di aggiungere un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età.
 
+// creo oggetto vuoto che ospiterà nome, cognome ed età
+
 var studente = {
-  "nome": "Mario",
-  "cognome": "Rossi",
-  "età": "35",
+  "nome": '',
+  "cognome": '',
+  "età": '',
 };
 
-console.log(studente);
-
+// stampo le proprietà dell'oggetto
 for (var proprietà in studente){
-  console.log("la proprietà dello studente è: " + proprietà + " e il valore è: " + studente[proprietà]);
+  console.log("la proprietà dello studente è: " + proprietà);
 }
+
+// creo 5 studenti che andranno nell'array aula
 
 var s1 = {
   "nome": "Paolo",
@@ -46,9 +49,12 @@ var s5 = {
   "età": "25",
 };
 
+// creo l'array aula
+
 var aula = [s1, s2, s3, s4, s5];
 console.log(aula);
-aula.push(studente);
+
+// stampo nome e cognome di ogni studente
 
 for (var nome in s1){
   console.log(s1.nome + ' ' + s1.cognome);
@@ -65,6 +71,18 @@ for (var nome in s4){
 for (var nome in s5){
   console.log(s5.nome + ' ' + s5.cognome);
 }
-for (var nome in studente){
-  console.log(studente.nome + ' ' + studente.cognome);
-}
+
+// creo i prompt per far inserire allo studente i propri dati
+
+var nomeStudente = prompt("Inserisci il nome");
+var cognomeStudente = prompt("Inserisci il cognome");
+var etaStudente = parseInt(prompt("Inserisci l'età"));
+
+// assegno ai prompt le proprietà dell'oggetto studente
+studente.nome = nomeStudente;
+studente.cognome = cognomeStudente;
+studente.età = etaStudente;
+
+// lo stampo in pagina e lo pusho in aula
+console.log(studente);
+aula.push(studente);
