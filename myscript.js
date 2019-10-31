@@ -9,7 +9,7 @@
 var studente = {
   "nome": '',
   "cognome": '',
-  "età": '',
+  "eta": '',
 };
 
 // stampo le proprietà dell'oggetto
@@ -22,31 +22,31 @@ for (var proprietà in studente){
 var s1 = {
   "nome": "Paolo",
   "cognome": "Bianchi",
-  "età": "30",
+  "eta": "30",
 };
 
 var s2 = {
   "nome": "Sergio",
   "cognome": "Neri",
-  "età": "20",
+  "eta": "20",
 };
 
 var s3 = {
   "nome": "Carlo",
   "cognome": "Carli",
-  "età": "40",
+  "eta": "40",
 };
 
 var s4 = {
   "nome": "Marta",
   "cognome": "Nani",
-  "età": "32",
+  "eta": "32",
 };
 
 var s5 = {
   "nome": "Alice",
   "cognome": "Verdi",
-  "età": "25",
+  "eta": "25",
 };
 
 // creo l'array aula
@@ -54,29 +54,7 @@ var s5 = {
 var aula = [s1, s2, s3, s4, s5];
 console.log(aula); // aula prima dell'arrivo del nuovo studente
 
-// for (var nome in s1){ // in realtà potrei avere un ciclo for con aula[i].nome e anche con il cognome // oppure sempre con il ciclo for si può stampare tutto tranne eta grazie al for in con un if
-//   console.log(s1.nome + ' ' + s1.cognome);
-// }
-// for (var nome in s2){
-//   console.log(s2.nome + ' ' + s2.cognome);
-// }
-// for (var nome in s3){
-//   console.log(s3.nome + ' ' + s3.cognome);
-// }
-// for (var nome in s4){
-//   console.log(s4.nome + ' ' + s4.cognome);
-// }
-// for (var nome in s5){
-//   console.log(s5.nome + ' ' + s5.cognome);
-// }
-
-// for (i = 0; i < aula.length; i++){
-//   console.log(aula[i].nome + ' ' + aula[i].cognome);
-// }
-
-for (i = 0; i < aula.length; i++){
-  console.log(aula[i].nome + ' ' + aula[i].cognome);
-} // stampo nome e cognome dell'aula senza il nuovo studente
+aggiuntaLista(studente)
 
 // creo i prompt per far inserire allo studente i propri dati
 
@@ -87,7 +65,7 @@ var etaStudente = parseInt(prompt("Inserisci l'età"));
 // assegno ai prompt le proprietà dell'oggetto studente
 studente.nome = nomeStudente;
 studente.cognome = cognomeStudente;
-studente.età = etaStudente;
+studente.eta = etaStudente;
 
 // pusho lo studente nell'aula
 aula.push(studente);
@@ -96,6 +74,12 @@ aula.push(studente);
 
 console.log(aula); // aula al completo
 
-for (i = 0; i < aula.length; i++){
-  console.log(aula[i].nome + ' ' + aula[i].cognome);
-} // nome e cognome di tutti gli studenti, aggiunta compresa
+aggiuntaLista(studente) // stampo la lista con il nuovo studente
+
+// FUNZIONI
+function aggiuntaLista(nuovoIscritto) {
+  var array = aula
+  for (i = 0; i < array.length; i++){
+    console.log(array[i].nome + ' ' + array[i].cognome);
+  } // stampo nome e cognome dell'aula senza il nuovo studente
+}
