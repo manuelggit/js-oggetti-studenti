@@ -48,18 +48,23 @@ var s5 = {
 
 var aula = [s1, s2, s3, s4, s5];
 console.log(aula);
+aula.push(studente);
+
 for (var nome in s1){
-  console.log(s1.nome);
+  console.log(s1.nome + ' ' + s1.cognome);
 }
 for (var nome in s2){
-  console.log(s2.nome);
+  console.log(s2.nome + ' ' + s2.cognome);
 }
 for (var nome in s3){
-  console.log(s3.nome);
+  console.log(s3.nome + ' ' + s3.cognome);
 }
 for (var nome in s4){
-  console.log(s4.nome);
+  console.log(s4.nome + ' ' + s4.cognome);
 }
 for (var nome in s5){
-  console.log(s5.nome);
+  console.log(s5.nome + ' ' + s5.cognome);
+}
+for (var nome in studente){
+  console.log(studente.nome + ' ' + studente.cognome);
 }
