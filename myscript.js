@@ -13,7 +13,7 @@ var studente = {
 console.log(studente);
 
 for (var proprietà in studente){
-  console.log("le proprietà dello studente sono: " + proprietà + " e il loro valore è: " + studente[proprietà]);
+  console.log("la proprietà dello studente è: " + proprietà + " e il valore è: " + studente[proprietà]);
 }
 
 var s1 = {
@@ -48,3 +48,18 @@ var s5 = {
 
 var aula = [s1, s2, s3, s4, s5];
 console.log(aula);
+for (var nome in s1){
+  console.log(s1.nome);
+}
+for (var nome in s2){
+  console.log(s2.nome);
+}
+for (var nome in s3){
+  console.log(s3.nome);
+}
+for (var nome in s4){
+  console.log(s4.nome);
+}
+for (var nome in s5){
+  console.log(s5.nome);
+}
