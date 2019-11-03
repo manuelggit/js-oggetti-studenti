@@ -81,5 +81,5 @@ function aggiuntaLista(nuovoIscritto) {
   var array = aula
   for (i = 0; i < array.length; i++){
     console.log(array[i].nome + ' ' + array[i].cognome);
-  } // stampo nome e cognome dell'aula senza il nuovo studente
+  } 
 }
